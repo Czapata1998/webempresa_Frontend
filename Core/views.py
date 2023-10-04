@@ -13,11 +13,6 @@ def about(request):
     return render(request, "core/about.html")
 
 
-def servicies(request):
-    
-    return render(request, "core/services.html")
-
-
 def store(request):
     
     return render(request, "core/store.html")
