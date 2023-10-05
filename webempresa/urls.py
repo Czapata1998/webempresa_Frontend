@@ -25,6 +25,8 @@ urlpatterns = [
      path('', include('Core.urls')),
      #PATH DE LA APP SERVICES
      path('services/', include('Services.urls')),
+    #PATH DE LA APP BLOG 
+    path('blog/', include('Blog.urls')),
   
 ]
 
@@ -32,7 +34,7 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
     
-    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT )
+    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT )  #toda esta configuracion es para la correcta visualizacion de las imagenes
     
     
   

@@ -15,5 +15,5 @@ class Service (models.Model):
         verbose_name_plural = "Servicios"
         ordering = ['-created']  #Ordenar los archivos por fecha de creación - AL CREATED SE LE COLOCA UN - PARA QUE LOS NUEVOS ARTICULOS QUEDEN DE PRIMEROS
     
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
