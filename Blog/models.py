@@ -14,7 +14,7 @@ class Category(models.Model):
         ordering = ['-created']  #Ordenar los archivos por fecha de creación - AL CREATED SE LE COLOCA UN - PARA QUE LOS NUEVOS ARTICULOS QUEDEN DE PRIMEROS
         
     def __str__(self):
-         return self.name
+        return self.name
 
 
 
