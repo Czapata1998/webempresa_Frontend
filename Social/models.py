@@ -10,10 +10,11 @@ class Link(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de actualización")
     
+    
     class Meta:
         verbose_name = "Enlace"
         verbose_name_plural = "Enlaces"
-        ordering = ['name']
+        ordering = [  'name']
     
     def __str__(self):
         return self.name

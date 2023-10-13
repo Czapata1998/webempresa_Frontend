@@ -104,12 +104,21 @@
 	        
 	    </p>
         <p class="m-0 mbt">
-          {% if LINK_POLITICA %}
+           {% comment %} {% if LINK_POLITICA %}
           <a href="{{LINK_POLITICA}}" class="link">Política de privacidad</a> ·
           {% endif %}
         	
         	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
+        	<a href="sample.html" class="link">Cookies</a>  {% endcomment %}
+
+          {% load pages_extras %}
+
+          {% get_page_list as  page_list %} 
+             
+          {% for page in page_list %}
+          <a href="{% url 'page' page.id page.name|slugify %}  " class="link"> {{page.name}}</a> {% if not forloop.last %}. {% endif %}
+         
+          {% endfor %}
 		</p>
         <p class="m-0 mbt1">&copy; La Caffettiera 2023</p>
       </div>
