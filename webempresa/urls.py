@@ -30,6 +30,9 @@ urlpatterns = [
     
      #PATH DE LA APP PAGES
     path('page/', include('Pages.urls')),
+    
+      #PATH DE LA APP CONTACT
+    path('contact/', include('Contact.urls')),
   
 ]
 

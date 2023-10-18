@@ -5,7 +5,7 @@ from .models import Page
 
 class AdminPage(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
-    list_display = ('name', 'created', 'updated')
+    list_display = ('name', 'order')
     search_fields = ( 'name', 'created', 'updated')
     
 admin.site.register(Page, AdminPage)
